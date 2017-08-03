@@ -13,5 +13,15 @@
 !/log/.keep
 !/tmp/.keep
 
+/log/development.log
+
+Gemfile.lock
+
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore .env file.
+.env
+
+# DS_Store
+.DS_Store
