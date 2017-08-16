@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170811010513) do
+ActiveRecord::Schema.define(version: 20170816005045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,18 +20,20 @@ ActiveRecord::Schema.define(version: 20170811010513) do
     t.string   "room_type"
     t.integer  "accommodate"
     t.integer  "bed_room"
-    t.integer  "bath_rom"
+    t.integer  "bath_room"
     t.string   "listing_name"
     t.text     "summary"
     t.string   "address"
     t.boolean  "is_tv"
     t.boolean  "is_heating"
-    t.boolean  "is_intener"
+    t.boolean  "is_internet"
     t.integer  "price"
     t.boolean  "active"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "is_kitchen"
+    t.boolean  "is_air"
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
