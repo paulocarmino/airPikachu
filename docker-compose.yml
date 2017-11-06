@@ -9,19 +9,13 @@ services:
     depends_on:
       - 'postgres'
     build: .
-    command: bash start.sh
+    command: bash -c "bundle exec puma -C config/puma.rb"
     ports:
       - '3000:3000'
     volumes:
-      - '.:/airPikachu'
-    volumes_from:
-    - box
-
-  box:
-    image: busybox
-    volumes:
-      - /box
+      - '.:/usr/app/'
+      - 'gem_cache:/gems'
 
 volumes:
   postgres:
-  box:
+  gem_cache:
