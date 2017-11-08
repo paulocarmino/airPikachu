@@ -58,6 +58,7 @@ class RoomsController < ApplicationController
   private
     def set_room
       @room = Room.find(params[:id])
+      @photos = @room.photos
     end
 
     def is_authorised
